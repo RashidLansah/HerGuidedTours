@@ -36,7 +36,7 @@
 }
 
 .testimonial-text-black p {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 95px;
   font-weight: 400;
   line-height: 140px;
@@ -77,7 +77,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 0;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   opacity: 0.3;
 }
 

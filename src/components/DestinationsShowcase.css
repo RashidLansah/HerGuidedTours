@@ -58,7 +58,7 @@
   position: absolute;
   font-size: 141.9px;
   font-weight: 400;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   color: white;
   line-height: 185px;
   text-transform: capitalize;
@@ -70,7 +70,7 @@
   position: relative;
   font-size: 141.9px;
   font-weight: 400;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   color: #000;
   line-height: 185px;
   text-transform: capitalize;
@@ -165,7 +165,7 @@
 .card-description {
   font-size: 14px;
   font-weight: 300;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   color: #868686;
   line-height: 22px;
   margin: 0;
@@ -201,7 +201,7 @@
 .card-excludes {
   font-size: 12px;
   font-weight: 300;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   color: #868686;
   line-height: 18px;
   margin: 0;
