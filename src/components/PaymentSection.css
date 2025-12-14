@@ -1,0 +1,69 @@
+.payment-section {
+  padding: 100px 106px;
+  background: #f9f9f9;
+}
+
+.payment-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.payment-plan,
+.cancellation-policy,
+.packing-list {
+  background: white;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.payment-plan h2,
+.cancellation-policy h2,
+.packing-list h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0 0 20px 0;
+  color: #000;
+}
+
+.divider {
+  font-size: 24px;
+  color: #666;
+  margin: 20px 0;
+}
+
+.payment-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.payment-list li {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #666;
+  margin-bottom: 15px;
+  padding-left: 25px;
+  position: relative;
+}
+
+.payment-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #FFD700;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.cancellation-policy p,
+.packing-list p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #666;
+  margin: 0;
+}
+

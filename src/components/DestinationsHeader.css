@@ -1,0 +1,70 @@
+.destinations-header-section {
+  padding: 97px 106px 0;
+  background: white;
+}
+
+.section-header {
+  width: 100%;
+  text-align: left;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.section-header > div {
+  max-width: 650px;
+  display: flex;
+  flex-direction: column;
+  gap: 22.45px;
+  align-items: flex-start;
+  margin-left: 0;
+}
+
+.section-heading {
+  border-left: 4px solid #000;
+  padding-left: 37px;
+  margin-bottom: 0;
+}
+
+.section-heading h2 {
+  font-size: 40px;
+  line-height: 46px;
+  font-family: 'Montserrat', sans-serif;
+  color: #000;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.heading-line {
+  display: block;
+  line-height: 46px;
+}
+
+.heading-bold {
+  font-weight: 900;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.heading-regular {
+  font-weight: 400;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.section-description {
+  font-size: 17px;
+  line-height: 24.91px;
+  color: #868686;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  margin: 0;
+  padding-left: 37px;
+  max-width: 650px;
+  text-align: left;
+}
+
