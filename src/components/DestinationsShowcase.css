@@ -30,7 +30,7 @@
 }
 
 .showcase-yellow {
-  background: #9D4EDD;
+  background: #FFE500;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -78,7 +78,7 @@
 }
 
 .showcase-yellow .text-front {
-  color: white;
+  color: #000;
 }
 
 .text-back-gray {
@@ -129,12 +129,12 @@
   position: absolute;
   top: 56px;
   right: -0.51px;
-  background: #9D4EDD;
+  background: #FFE500;
   padding: 7px 14px;
   font-size: 15px;
   font-weight: bold;
   font-family: 'Montserrat', sans-serif;
-  color: #fff;
+  color: #000;
   z-index: 10;
   border-radius: 8px;
 }
@@ -227,5 +227,113 @@
   margin-top: auto;
   flex-shrink: 0;
   font-size: 13px;
+}
+
+@media (max-width: 1024px) {
+  .showcase-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
+
+  .text-back,
+  .text-front {
+    font-size: 80px;
+    line-height: 100px;
+  }
+
+  .text-back-gray,
+  .text-front-yellow {
+    font-size: 90px;
+    line-height: 110px;
+  }
+
+  .showcase-card {
+    padding: 40px 30px 30px 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .showcase-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .showcase-item {
+    min-height: 300px;
+  }
+
+  .showcase-image {
+    min-height: 250px;
+  }
+
+  .text-back,
+  .text-front {
+    font-size: 60px;
+    line-height: 80px;
+  }
+
+  .text-back-gray,
+  .text-front-yellow {
+    font-size: 70px;
+    line-height: 90px;
+  }
+
+  .showcase-card {
+    padding: 30px 20px 25px 20px;
+  }
+
+  .new-badge {
+    top: 20px;
+    right: 20px;
+    font-size: 13px;
+    padding: 5px 12px;
+  }
+
+  .showcase-card h3 {
+    font-size: 22px;
+    line-height: 28px;
+  }
+
+  .card-subtitle {
+    font-size: 13px;
+  }
+
+  .card-description {
+    font-size: 13px;
+    line-height: 20px;
+  }
+
+  .card-includes,
+  .card-excludes {
+    font-size: 11px;
+    line-height: 16px;
+  }
+
+  .card-price {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .text-back,
+  .text-front {
+    font-size: 48px;
+    line-height: 60px;
+  }
+
+  .text-back-gray,
+  .text-front-yellow {
+    font-size: 56px;
+    line-height: 70px;
+  }
+
+  .showcase-card {
+    padding: 25px 15px 20px 15px;
+  }
+
+  .showcase-card h3 {
+    font-size: 20px;
+    line-height: 26px;
+  }
 }
 

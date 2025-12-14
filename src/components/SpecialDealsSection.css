@@ -222,3 +222,79 @@
 .indicator.active {
   background: #000;
 }
+
+@media (max-width: 768px) {
+  .special-deals-section {
+    padding: 0 15px 50px;
+  }
+
+  .deal-card {
+    width: 280px;
+    padding: 8px;
+  }
+
+  .deal-image-wrapper {
+    height: 160px;
+  }
+
+  .deal-header {
+    padding: 25px 20px 0;
+  }
+
+  .deal-header h3 {
+    font-size: 16px;
+    line-height: 22px;
+    max-width: calc(100% - 120px);
+  }
+
+  .deal-price-top {
+    right: 20px;
+    top: 25px;
+  }
+
+  .price-current {
+    font-size: 16px;
+  }
+
+  .price-note {
+    font-size: 12px;
+  }
+
+  .deal-description {
+    padding: 0 20px;
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 12px;
+  }
+
+  .deal-includes {
+    padding: 0 20px;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .deal-footer {
+    padding: 14px 20px;
+    height: 70px;
+  }
+
+  .deal-button {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .deal-card {
+    width: 260px;
+  }
+
+  .deal-image-wrapper {
+    height: 140px;
+  }
+
+  .deal-header h3 {
+    font-size: 15px;
+    line-height: 20px;
+  }
+}

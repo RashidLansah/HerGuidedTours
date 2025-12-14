@@ -12,7 +12,7 @@
 
 .testimonial-left {
   flex: 1 0 0;
-  background: #9D4EDD;
+  background: #FFE500;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -40,7 +40,7 @@
   font-size: 95px;
   font-weight: 400;
   line-height: 140px;
-  color: white;
+  color: #000;
   margin: 0;
   text-align: center;
 }
@@ -197,9 +197,14 @@
   padding: 10.52px 14.21px 10.48px 12.21px;
 }
 
+
 @media (max-width: 1024px) {
   .testimonial-container {
     flex-direction: column;
+  }
+
+  .testimonial-left {
+    padding: 60px 30px 80px;
   }
 
   .testimonial-text-black p {
@@ -207,10 +212,81 @@
     line-height: 70px;
   }
 
+  .testimonial-right {
+    padding: 30px 40px;
+  }
+
   .testimonial-quote p,
   .testimonial-main-quote p {
     font-size: 20px;
     line-height: 28px;
     white-space: normal;
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonial-container {
+    min-height: auto;
+  }
+
+  .testimonial-left {
+    padding: 40px 20px 50px;
+  }
+
+  .testimonial-text-black p {
+    font-size: 42px;
+    line-height: 50px;
+  }
+
+  .testimonial-right {
+    padding: 30px 20px;
+  }
+
+  .testimonial-card-wrapper {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .testimonial-decorative-number {
+    font-size: 200px;
+  }
+
+  .testimonial-card {
+    padding: 40px 0 50px;
+  }
+
+  .testimonial-quote p,
+  .testimonial-main-quote p {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .testimonial-author {
+    font-size: 14px;
+  }
+
+  .testimonial-nav {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    margin-top: 20px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonial-text-black p {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .testimonial-decorative-number {
+    font-size: 150px;
+  }
+
+  .testimonial-quote p,
+  .testimonial-main-quote p {
+    font-size: 16px;
+    line-height: 24px;
   }
 }
