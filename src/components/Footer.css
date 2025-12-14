@@ -1,5 +1,31 @@
 .footer {
   background: white;
+  position: relative;
+}
+
+.footer::before,
+.footer::after {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  opacity: 0.03;
+  z-index: 0;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 10 C45 10, 40 15, 40 25 L40 50 C40 60, 45 65, 50 65 C55 65, 60 60, 60 50 L60 25 C60 15, 55 10, 50 10 Z' fill='%23000'/%3E%3Ccircle cx='45' cy='25' r='8' fill='%23000'/%3E%3Cpath d='M37 25 L32 22 L32 28 Z' fill='%23000'/%3E%3Cpath d='M50 65 L45 75 L50 70 L55 75 Z' fill='%23000'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.footer::before {
+  top: 30px;
+  left: 30px;
+}
+
+.footer::after {
+  bottom: 30px;
+  right: 30px;
+  transform: scale(-1, -1);
 }
 
 .footer-gallery {

@@ -66,11 +66,7 @@ function DestinationsShowcase() {
             <p className="card-description">
               {tours[0].description}
             </p>
-            <div className="card-details">
-              <p className="card-includes"><strong>Includes:</strong> {tours[0].includes}</p>
-              {tours[0].excludes && <p className="card-excludes"><strong>Excludes:</strong> {tours[0].excludes}</p>}
-              <p className="card-price">{tours[0].price} {tours[0].priceNote}</p>
-            </div>
+            <p className="card-price">{tours[0].price} {tours[0].priceNote}</p>
             <a href="#" className="card-link">learn more →</a>
           </div>
         </div>
@@ -83,10 +79,7 @@ function DestinationsShowcase() {
             <p className="card-description">
               {tours[1].description}
             </p>
-            <div className="card-details">
-              <p className="card-includes"><strong>Includes:</strong> {tours[1].includes}</p>
-              <p className="card-price">{tours[1].price} {tours[1].priceNote}</p>
-            </div>
+            <p className="card-price">{tours[1].price} {tours[1].priceNote}</p>
             <a href="#" className="card-link">learn more →</a>
           </div>
         </div>
@@ -115,10 +108,7 @@ function DestinationsShowcase() {
             <p className="card-description">
               {tours[2].description}
             </p>
-            <div className="card-details">
-              <p className="card-includes"><strong>Includes:</strong> {tours[2].includes}</p>
-              <p className="card-price">{tours[2].price} {tours[2].priceNote}</p>
-            </div>
+            <p className="card-price">{tours[2].price} {tours[2].priceNote}</p>
             <a href="#" className="card-link">learn more →</a>
           </div>
         </div>

@@ -2,6 +2,22 @@
   padding: 0;
   background: white;
   overflow: hidden;
+  position: relative;
+}
+
+.destinations-showcase::before {
+  content: '';
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  width: 90px;
+  height: 90px;
+  opacity: 0.02;
+  z-index: 0;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 10 C45 10, 40 15, 40 25 L40 50 C40 60, 45 65, 50 65 C55 65, 60 60, 60 50 L60 25 C60 15, 55 10, 50 10 Z' fill='%23000'/%3E%3Ccircle cx='45' cy='25' r='8' fill='%23000'/%3E%3Cpath d='M37 25 L32 22 L32 28 Z' fill='%23000'/%3E%3Cpath d='M50 65 L45 75 L50 70 L55 75 Z' fill='%23000'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .showcase-grid {
@@ -103,7 +119,7 @@
 
 .showcase-card {
   background: #fafafa;
-  padding: 70px 50px 50px 40px;
+  padding: 60px 50px 50px 40px;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -114,7 +130,7 @@
 .card-content {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 20px;
   width: 100%;
   height: 100%;
   justify-content: flex-start;
@@ -140,12 +156,12 @@
 }
 
 .showcase-card h3 {
-  font-size: 26px;
-  font-weight: 400;
+  font-size: 32px;
+  font-weight: 600;
   font-family: 'Montserrat', sans-serif;
   color: #000;
   margin: 0;
-  line-height: 32px;
+  line-height: 1.2;
 }
 
 .showcase-card h3 .bold {
@@ -153,28 +169,27 @@
 }
 
 .card-subtitle {
-  font-size: 14px;
-  font-weight: 300;
+  font-size: 16px;
+  font-weight: 400;
   font-style: italic;
   font-family: 'Montserrat', sans-serif;
   color: #ff0030;
   margin: 0;
-  line-height: 22px;
+  line-height: 1.4;
 }
 
 .card-description {
-  font-size: 14px;
-  font-weight: 300;
+  font-size: 18px;
+  font-weight: 400;
   font-family: 'Montserrat', sans-serif;
-  color: #868686;
-  line-height: 22px;
+  color: #333;
+  line-height: 1.6;
   margin: 0;
-  padding-top: 8px;
 }
 
 .card-link {
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 600;
   font-family: 'Montserrat', sans-serif;
   color: #000;
   text-transform: lowercase;
@@ -182,51 +197,20 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  margin-top: 4px;
+  margin-top: auto;
 }
 
 .card-link:hover {
   color: #ff0030;
 }
 
-.card-details {
-  margin-top: 6px;
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
-  flex-shrink: 0;
-}
-
-.card-includes,
-.card-excludes {
-  font-size: 12px;
-  font-weight: 300;
-  font-family: 'Montserrat', sans-serif;
-  color: #868686;
-  line-height: 18px;
-  margin: 0;
-}
-
-.card-includes strong,
-.card-excludes strong {
-  font-weight: 600;
-  color: #000;
-}
-
 .card-price {
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 22px;
+  font-weight: 700;
   font-family: 'Montserrat', sans-serif;
   color: #000;
-  line-height: 20px;
-  margin: 4px 0 0 0;
-  flex-shrink: 0;
-}
-
-.card-link {
-  margin-top: auto;
-  flex-shrink: 0;
-  font-size: 13px;
+  line-height: 1.3;
+  margin: 0;
 }
 
 @media (max-width: 1024px) {
@@ -290,27 +274,25 @@
   }
 
   .showcase-card h3 {
-    font-size: 22px;
-    line-height: 28px;
+    font-size: 26px;
+    line-height: 1.2;
   }
 
   .card-subtitle {
-    font-size: 13px;
+    font-size: 14px;
   }
 
   .card-description {
-    font-size: 13px;
-    line-height: 20px;
-  }
-
-  .card-includes,
-  .card-excludes {
-    font-size: 11px;
-    line-height: 16px;
+    font-size: 16px;
+    line-height: 1.5;
   }
 
   .card-price {
-    font-size: 13px;
+    font-size: 18px;
+  }
+
+  .card-link {
+    font-size: 14px;
   }
 }
 
@@ -332,8 +314,25 @@
   }
 
   .showcase-card h3 {
-    font-size: 20px;
-    line-height: 26px;
+    font-size: 22px;
+    line-height: 1.2;
+  }
+
+  .card-subtitle {
+    font-size: 13px;
+  }
+
+  .card-description {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .card-price {
+    font-size: 16px;
+  }
+
+  .card-link {
+    font-size: 13px;
   }
 }
 
