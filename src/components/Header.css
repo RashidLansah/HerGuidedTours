@@ -47,6 +47,23 @@
   transition: color 0.3s ease;
 }
 
+.nav a.active {
+  color: #9D4EDD;
+  font-weight: 600;
+  position: relative;
+}
+
+.nav a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #9D4EDD;
+  border-radius: 2px;
+}
+
 .mobile-menu-toggle {
   display: none;
   flex-direction: column;
@@ -112,6 +129,17 @@
 
   .nav a:last-child {
     border-bottom: none;
+  }
+
+  .nav a.active::after {
+    display: none;
+  }
+
+  .nav a.active {
+    background: rgba(157, 78, 221, 0.1);
+    padding-left: 15px;
+    border-left: 3px solid #9D4EDD;
+    border-bottom: 1px solid #f0f0f0;
   }
 }
 

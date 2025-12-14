@@ -15,16 +15,28 @@ function App() {
   return (
     <div className="app">
       <Header />
-      <Hero />
-      <ToursHeader />
-      <ImageGallery />
-      <DestinationsHeader />
-      <DestinationsShowcase />
-      <SpecialDealsHeader />
-      <SpecialDealsSection />
-      <TestimonialSection />
-      <AutoScrollGallery />
-      <Footer />
+      <section id="home">
+        <Hero />
+      </section>
+      <section id="tours">
+        <ToursHeader />
+        <ImageGallery />
+      </section>
+      <section id="destinations">
+        <DestinationsHeader />
+        <DestinationsShowcase />
+      </section>
+      <section id="about">
+        <SpecialDealsHeader />
+        <SpecialDealsSection />
+      </section>
+      <section id="blog">
+        <TestimonialSection />
+        <AutoScrollGallery />
+      </section>
+      <section id="contact">
+        <Footer />
+      </section>
     </div>
   )
 }
