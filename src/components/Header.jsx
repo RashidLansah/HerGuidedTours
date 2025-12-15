@@ -3,10 +3,10 @@ import './Header.css'
 
 const menuItems = [
   { id: 'home', label: 'Home' },
-  { id: 'about', label: 'About us' },
-  { id: 'destinations', label: 'Destinations' },
   { id: 'tours', label: 'Tours' },
-  { id: 'blog', label: 'Blog' },
+  { id: 'destinations', label: 'Destinations' },
+  { id: 'about', label: 'Experiences' },
+  { id: 'blog', label: 'Reviews' },
   { id: 'contact', label: 'Contact' }
 ]
 
@@ -31,6 +31,19 @@ function Header() {
       })
     }
   }
+
+  // Disable body scroll when mobile menu is open
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = ''
+    }
+    
+    return () => {
+      document.body.style.overflow = ''
+    }
+  }, [isMenuOpen])
 
   // Detect active section on scroll
   useEffect(() => {
@@ -105,7 +118,9 @@ function Header() {
         {/* Mobile Menu */}
         <nav className={`nav ${isMenuOpen ? 'nav-open' : ''}`}>
           <div className="mobile-menu-header">
-            <div className="mobile-menu-logo">HerGuided Tours</div>
+            <div className="mobile-menu-logo">
+              HerGuided Tours <span className="mobile-menu-subtitle">& Cultural Experiences</span>
+            </div>
           </div>
           
           <div className="mobile-menu-section">
