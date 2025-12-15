@@ -117,6 +117,8 @@
 
 .social-icon:hover {
   color: #9D4EDD;
+  transform: translateY(-3px) scale(1.1);
+  box-shadow: 0 4px 12px rgba(157, 78, 221, 0.3);
 }
 
 .social-icon svg {
@@ -168,8 +170,12 @@
 
 .hero-book-button:hover {
   background: #9D4EDD;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(157, 78, 221, 0.3);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(157, 78, 221, 0.4);
+}
+
+.hero-book-button:active {
+  transform: translateY(-1px) scale(0.98);
 }
 
 .hero-image-section {

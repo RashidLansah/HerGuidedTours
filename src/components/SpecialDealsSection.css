@@ -33,11 +33,19 @@
   display: flex;
   flex-direction: column;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  animation: fadeInUp 0.6s ease-out backwards;
 }
 
+.deal-card:nth-child(1) { animation-delay: 0.1s; }
+.deal-card:nth-child(2) { animation-delay: 0.2s; }
+.deal-card:nth-child(3) { animation-delay: 0.3s; }
+.deal-card:nth-child(4) { animation-delay: 0.4s; }
+.deal-card:nth-child(5) { animation-delay: 0.5s; }
+.deal-card:nth-child(6) { animation-delay: 0.6s; }
+
 .deal-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 24px rgba(157, 78, 221, 0.2);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 28px rgba(157, 78, 221, 0.25);
 }
 
 .deal-image-wrapper {
@@ -235,7 +243,12 @@
 .deal-button:hover {
   background: #8B3DD1;
   border-color: #8B3DD1;
-  transform: scale(1.05);
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 6px 16px rgba(157, 78, 221, 0.3);
+}
+
+.deal-button:active {
+  transform: translateY(0) scale(1.02);
 }
 
 .carousel-indicators {

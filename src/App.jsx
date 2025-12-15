@@ -1,4 +1,5 @@
 import './App.css'
+import './styles/animations.css'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import ToursHeader from './components/ToursHeader'
