@@ -18,7 +18,7 @@ function ToursHeader() {
             </h2>
           </div>
           <p className="section-description">
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa cum sociis Theme natoque.
+            Discover unforgettable adventures across Northern Ghana. From cultural immersions to nature expeditions, experience authentic, women-led tours that connect you with local communities and breathtaking landscapes.
           </p>
         </div>
       </div>
@@ -27,4 +27,5 @@ function ToursHeader() {
 }
 
 export default ToursHeader
+
 

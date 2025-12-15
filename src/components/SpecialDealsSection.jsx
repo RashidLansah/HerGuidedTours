@@ -1,6 +1,12 @@
 import './SpecialDealsSection.css'
 
 function SpecialDealsSection() {
+  const handleWhatsAppBooking = (tour) => {
+    const phoneNumber = '2338642845' // Remove + for WhatsApp URL
+    const message = `Hello! I'm interested in booking: *${tour.title}* (${tour.price}${tour.priceNote}). ${tour.description}`
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
+    window.open(whatsappUrl, '_blank')
+  }
   const tours = [
     { 
       id: 1, 
@@ -125,7 +131,7 @@ function SpecialDealsSection() {
                   <strong>Includes:</strong> {tour.includes}
                 </div>
                 <div className="deal-footer">
-                  <button type="button" className="deal-button">Book Now</button>
+                  <button type="button" className="deal-button" onClick={() => handleWhatsAppBooking(tour)}>Book Now</button>
                 </div>
               </div>
             </div>

@@ -1,6 +1,6 @@
 .image-gallery {
   background: #f6f6f6;
-  padding: 10px 20px;
+  padding: 12px 20px;
   overflow: hidden;
 }
 
@@ -26,11 +26,39 @@
   cursor: pointer;
 }
 
+.gallery-item {
+  position: relative;
+}
+
+.gallery-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 200, 87, 0.1) 0%, rgba(157, 78, 221, 0.08) 100%);
+  z-index: 1;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover::before {
+  opacity: 0.6;
+}
+
 .gallery-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
+  filter: brightness(1.05) saturate(1.2) contrast(1.05);
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+  filter: brightness(1.1) saturate(1.3) contrast(1.1);
+  transform: scale(1.05);
 }
 
 .gallery-overlay {
@@ -39,7 +67,7 @@
   left: 0;
   right: 0;
   background: linear-gradient(to top, rgba(0,0,0,0.5), transparent);
-  padding: 27px 30px;
+  padding: 28px 32px;
   color: white;
   opacity: 0;
   transition: opacity 0.3s;
@@ -51,15 +79,17 @@
 
 .gallery-overlay h3 {
   font-size: 28px;
-  font-weight: 400;
+  font-weight: 700;
   font-family: 'Montserrat', sans-serif;
   margin: 0 0 8px 0;
   line-height: 36.99px;
+  color: white;
 }
 
 .gallery-price {
   font-size: 18px;
-  color: #9D4EDD;
+  color: white;
+  font-weight: 700;
   font-family: 'Montserrat', sans-serif;
   margin: 0;
   line-height: 26px;
@@ -113,11 +143,19 @@
   grid-row: 2;
   background: white;
   border: 4px dashed #9D4EDD;
-  padding: 45px;
+  padding: 44px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   border-radius: 16px;
+}
+
+.textbox-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  width: 100%;
 }
 
 .textbox-content h3 {
@@ -127,20 +165,12 @@
   color: #000;
   margin: 0 0 8px 0;
   line-height: 36.99px;
+  text-align: left;
+  width: 100%;
 }
 
 .textbox-content .text-normal {
   font-weight: 400;
-}
-
-.textbox-price {
-  font-size: 15px;
-  color: #f5031a;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 300;
-  font-style: italic;
-  margin: 0 0 15px 0;
-  line-height: 26px;
 }
 
 .textbox-description {
@@ -150,6 +180,8 @@
   font-weight: 300;
   line-height: 26px;
   margin: 0 0 20px 0;
+  text-align: left;
+  width: 100%;
 }
 
 .textbox-link {

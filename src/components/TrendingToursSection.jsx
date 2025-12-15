@@ -47,3 +47,4 @@ function TrendingToursSection() {
 
 export default TrendingToursSection
 
+

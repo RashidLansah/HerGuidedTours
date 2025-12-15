@@ -16,11 +16,6 @@ function Footer() {
 
   return (
     <footer className="footer">
-      <div className="footer-gallery">
-        {galleryImages.map((image, index) => (
-          <img key={index} src={image} alt={`Gallery ${index + 1}`} />
-        ))}
-      </div>
       <div className="footer-main">
         <div className="footer-container">
           <div className="footer-column">
@@ -41,6 +36,13 @@ function Footer() {
                   <path d="M8.5 0C3.81354 0 0 3.81354 0 8.5C0 13.1865 3.81354 17 8.5 17C13.1865 17 17 13.1865 17 8.5C17 3.81354 13.1865 0 8.5 0ZM8.5 15.3C4.91046 15.3 1.7 12.0895 1.7 8.5C1.7 4.91046 4.91046 1.7 8.5 1.7C12.0895 1.7 15.3 4.91046 15.3 8.5C15.3 12.0895 12.0895 15.3 8.5 15.3ZM9.35 4.25H7.65V9.35H12.75V7.65H9.35V4.25Z" fill="#ccc"/>
                 </svg>
                 <span>Tamale, Northern Ghana</span>
+              </div>
+              <div className="contact-item">
+                <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8.5 0C3.81354 0 0 3.81354 0 8.5C0 13.1865 3.81354 17 8.5 17C13.1865 17 17 13.1865 17 8.5C17 3.81354 13.1865 0 8.5 0ZM8.5 15.3C4.91046 15.3 1.7 12.0895 1.7 8.5C1.7 4.91046 4.91046 1.7 8.5 1.7C12.0895 1.7 15.3 4.91046 15.3 8.5C15.3 12.0895 12.0895 15.3 8.5 15.3Z" fill="#ccc"/>
+                  <path d="M4.25 5.1L8.5 8.5L12.75 5.1V6.8L8.5 10.2L4.25 6.8V5.1Z" fill="#ccc"/>
+                </svg>
+                <a href="mailto:herguidedtours@gmail.com" className="contact-link">herguidedtours@gmail.com</a>
               </div>
             </div>
           </div>
@@ -68,6 +70,32 @@ function Footer() {
               {galleryImages.slice(0, 6).map((image, index) => (
                 <img key={index} src={image} alt={`Gallery ${index + 1}`} />
               ))}
+            </div>
+            <div className="footer-social-icons">
+              <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="footer-social-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  <rect x="2" y="9" width="4" height="12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  <circle cx="4" cy="4" r="2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </a>
+              <a href="https://www.x.com" target="_blank" rel="noopener noreferrer" className="footer-social-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+                </svg>
+              </a>
+              <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="footer-social-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </a>
+              <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer" className="footer-social-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.85 2.85 0 0 1 .88.13V9.4a6.18 6.18 0 0 0-1-.05A6.27 6.27 0 0 0 5 20.1a6.27 6.27 0 0 0 10.86-4.43v-7a4.85 4.85 0 0 0 3.77 1.94v-3.92z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+                </svg>
+              </a>
             </div>
           </div>
         </div>

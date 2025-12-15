@@ -1,0 +1,288 @@
+.what-to-know-section {
+  padding: 100px 104px;
+  background: white;
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.what-to-know-container {
+  width: 100vw;
+  max-width: 100vw;
+  margin: 0 auto;
+}
+
+.what-to-know-content {
+  display: flex;
+  gap: 160px;
+  align-items: center;
+  justify-content: center;
+}
+
+.what-to-know-left {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 561px;
+  flex-shrink: 0;
+}
+
+.what-to-know-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 64px;
+  font-weight: 900;
+  color: #000;
+  line-height: 46px;
+  margin: 0;
+}
+
+.what-to-know-info {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  padding: 0 40px;
+}
+
+.info-item {
+  border-left: 4px solid #FFE500;
+  padding-left: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.info-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+  color: #000;
+  line-height: normal;
+  margin: 0;
+}
+
+.info-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000;
+  line-height: normal;
+  margin: 0;
+}
+
+.info-list {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000;
+  line-height: normal;
+  margin: 0;
+  padding-left: 24px;
+  list-style: disc;
+}
+
+.info-list li {
+  margin-bottom: 8px;
+}
+
+.info-list li:last-child {
+  margin-bottom: 0;
+}
+
+.what-to-know-stroke {
+  height: 81px;
+  width: 504px;
+  margin-top: 0;
+}
+
+.what-to-know-stroke img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: left center;
+}
+
+.what-to-know-images {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.image-tall {
+  width: 160px;
+  border-radius: 80px;
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.image-tall-1 {
+  height: 655px;
+}
+
+.image-tall-2 {
+  height: 730px;
+}
+
+.image-tall img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(1.05) saturate(1.2) contrast(1.05);
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.image-tall:hover img {
+  filter: brightness(1.1) saturate(1.3) contrast(1.1);
+  transform: scale(1.05);
+}
+
+.image-column-right {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 160px;
+  flex-shrink: 0;
+}
+
+.image-square {
+  width: 160px;
+  height: 320px;
+  border-radius: 80px;
+  overflow: hidden;
+  position: relative;
+}
+
+.image-square img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(1.05) saturate(1.2) contrast(1.05);
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.image-square:hover img {
+  filter: brightness(1.1) saturate(1.3) contrast(1.1);
+  transform: scale(1.05);
+}
+
+@media (max-width: 1024px) {
+  .what-to-know-section {
+    padding: 80px 60px;
+  }
+
+  .what-to-know-content {
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  .what-to-know-left {
+    width: 100%;
+    max-width: 561px;
+  }
+
+  .what-to-know-info {
+    padding: 0;
+  }
+
+  .what-to-know-images {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .what-to-know-section {
+    padding: 60px 40px;
+  }
+
+  .what-to-know-title {
+    font-size: 48px;
+  }
+
+  .what-to-know-info {
+    gap: 60px;
+  }
+
+  .info-title {
+    font-size: 24px;
+  }
+
+  .info-text,
+  .info-list {
+    font-size: 14px;
+  }
+
+  .what-to-know-stroke {
+    width: 100%;
+    max-width: 504px;
+    height: 60px;
+  }
+
+  .what-to-know-images {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .image-tall,
+  .image-square {
+    width: calc(50% - 10px);
+    height: 300px;
+    border-radius: 40px;
+  }
+
+  .image-tall-1,
+  .image-tall-2 {
+    height: 300px;
+  }
+
+  .image-column-right {
+    width: 100%;
+    flex-direction: row;
+    gap: 15px;
+  }
+
+  .image-square {
+    width: calc(50% - 7.5px);
+  }
+}
+
+@media (max-width: 480px) {
+  .what-to-know-section {
+    padding: 40px 20px;
+  }
+
+  .what-to-know-title {
+    font-size: 36px;
+  }
+
+  .what-to-know-info {
+    gap: 40px;
+  }
+
+  .info-title {
+    font-size: 20px;
+  }
+
+  .what-to-know-images {
+    gap: 15px;
+  }
+
+  .image-column {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .image-tall,
+  .image-square {
+    width: 100%;
+    height: 250px;
+  }
+}
+

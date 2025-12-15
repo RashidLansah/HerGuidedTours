@@ -7,6 +7,7 @@ import DestinationsHeader from './components/DestinationsHeader'
 import DestinationsShowcase from './components/DestinationsShowcase'
 import SpecialDealsHeader from './components/SpecialDealsHeader'
 import SpecialDealsSection from './components/SpecialDealsSection'
+import WhatToKnowSection from './components/WhatToKnowSection'
 import TestimonialSection from './components/TestimonialSection'
 import AutoScrollGallery from './components/AutoScrollGallery'
 import Footer from './components/Footer'
@@ -29,6 +30,7 @@ function App() {
       <section id="about">
         <SpecialDealsHeader />
         <SpecialDealsSection />
+        <WhatToKnowSection />
       </section>
       <section id="blog">
         <TestimonialSection />

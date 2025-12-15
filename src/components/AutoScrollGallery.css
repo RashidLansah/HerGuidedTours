@@ -1,8 +1,9 @@
 .auto-scroll-gallery {
   width: 100%;
   overflow: hidden;
-  padding: 60px 0;
+  padding: 40px 0 0;
   background: #fafafa;
+  margin: 0;
 }
 
 .gallery-scroll-container {
@@ -13,8 +14,8 @@
 
 .gallery-scroll-track {
   display: flex;
-  gap: 20px;
-  animation: scroll 60s linear infinite;
+  gap: 0;
+  animation: scroll 120s linear infinite;
   width: fit-content;
 }
 
@@ -23,7 +24,7 @@
   width: 300px;
   height: 300px;
   overflow: hidden;
-  border-radius: 12px;
+  border-radius: 0;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
@@ -64,7 +65,7 @@
   }
 
   .gallery-scroll-track {
-    gap: 15px;
+    gap: 0;
   }
 }
 
@@ -79,7 +80,7 @@
   }
 
   .gallery-scroll-track {
-    gap: 12px;
+    gap: 0;
   }
 }
 

@@ -1,6 +1,12 @@
 import './ToursSection.css'
 
 function ToursSection() {
+  const handleWhatsAppBooking = (tour) => {
+    const phoneNumber = '2338642845' // Remove + for WhatsApp URL
+    const message = `Hello! I'm interested in booking: *${tour.title}* (${tour.price}/person). ${tour.description}`
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
+    window.open(whatsappUrl, '_blank')
+  }
   const tamaleTours = [
     { 
       id: 1, 
@@ -91,7 +97,7 @@ function ToursSection() {
                 <strong>Includes:</strong> {tour.includes}
               </div>
               <div className="tour-price">{tour.price} / person</div>
-              <button className="tour-button">Book Now</button>
+              <button className="tour-button" onClick={() => handleWhatsAppBooking(tour)}>Book Now</button>
             </div>
           </div>
         ))}

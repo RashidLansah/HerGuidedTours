@@ -1,6 +1,12 @@
 import './DestinationsShowcase.css'
 
 function DestinationsShowcase() {
+  const handleWhatsAppLearnMore = (tour) => {
+    const phoneNumber = '2338642845'
+    const message = `Hello! I'm interested in learning more about: *${tour.title}* (${tour.price}${tour.priceNote}). ${tour.description}`
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
+    window.open(whatsappUrl, '_blank')
+  }
   const tours = [
     {
       id: 1,
@@ -67,7 +73,16 @@ function DestinationsShowcase() {
               {tours[0].description}
             </p>
             <p className="card-price">{tours[0].price} {tours[0].priceNote}</p>
-            <a href="#" className="card-link">learn more →</a>
+            <a 
+              href="#" 
+              className="card-link"
+              onClick={(e) => {
+                e.preventDefault()
+                handleWhatsAppLearnMore(tours[0])
+              }}
+            >
+              learn more →
+            </a>
           </div>
         </div>
 
@@ -80,7 +95,16 @@ function DestinationsShowcase() {
               {tours[1].description}
             </p>
             <p className="card-price">{tours[1].price} {tours[1].priceNote}</p>
-            <a href="#" className="card-link">learn more →</a>
+            <a 
+              href="#" 
+              className="card-link"
+              onClick={(e) => {
+                e.preventDefault()
+                handleWhatsAppLearnMore(tours[1])
+              }}
+            >
+              learn more →
+            </a>
           </div>
         </div>
         <div className="showcase-item showcase-image">
@@ -109,7 +133,16 @@ function DestinationsShowcase() {
               {tours[2].description}
             </p>
             <p className="card-price">{tours[2].price} {tours[2].priceNote}</p>
-            <a href="#" className="card-link">learn more →</a>
+            <a 
+              href="#" 
+              className="card-link"
+              onClick={(e) => {
+                e.preventDefault()
+                handleWhatsAppLearnMore(tours[2])
+              }}
+            >
+              learn more →
+            </a>
           </div>
         </div>
         <div className="showcase-item showcase-image">

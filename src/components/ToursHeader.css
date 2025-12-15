@@ -1,5 +1,5 @@
 .tours-header-section {
-  padding: 100px 106px 0;
+  padding: 100px 104px 0;
   background: white;
   position: relative;
   z-index: 1;
@@ -20,14 +20,14 @@
   max-width: 650px;
   display: flex;
   flex-direction: column;
-  gap: 22.455px;
+  gap: 24px;
   align-items: flex-start;
   margin-left: 0;
 }
 
 .section-heading {
   border-left: 4px solid #000;
-  padding-left: 37px;
+  padding-left: 36px;
   margin-bottom: 0;
 }
 
@@ -66,7 +66,8 @@
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
   margin: 0;
-  padding-left: 37px;
+  padding-left: 36px;
+  padding-bottom: 32px;
   max-width: 650px;
   text-align: left;
 }
@@ -74,7 +75,7 @@
 .tours-header-section::before {
   content: '';
   position: absolute;
-  top: 50px;
+  top: 48px;
   right: 80px;
   width: 80px;
   height: 80px;
@@ -89,7 +90,7 @@
 
 @media (max-width: 768px) {
   .tours-header-section {
-    padding: 60px 20px 0;
+    padding: 64px 20px 0;
   }
 
   .section-heading {
@@ -116,7 +117,7 @@
 
 @media (max-width: 480px) {
   .tours-header-section {
-    padding: 40px 15px 0;
+    padding: 40px 16px 0;
   }
 
   .section-heading h2 {

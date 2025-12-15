@@ -1,6 +1,12 @@
 import './DestinationsSection.css'
 
 function DestinationsSection() {
+  const handleWhatsAppBooking = (tour) => {
+    const phoneNumber = '2338642845' // Remove + for WhatsApp URL
+    const message = `Hello! I'm interested in booking: *${tour.title}* (${tour.price}/person). ${tour.description}`
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
+    window.open(whatsappUrl, '_blank')
+  }
   const festivals = [
     {
       title: 'Fire Festival Experience',
@@ -58,7 +64,7 @@ function DestinationsSection() {
                 <p className="destination-note">{festival.note}</p>
               )}
               <div className="destination-price">{festival.price} / person</div>
-              <button className="destination-button">Book Now</button>
+              <button className="destination-button" onClick={() => handleWhatsAppBooking(festival)}>Book Now</button>
             </div>
           </div>
         ))}
@@ -90,7 +96,7 @@ function DestinationsSection() {
                 <p className="destination-note">{tour.note}</p>
               )}
               <div className="destination-price">{tour.price} / person</div>
-              <button className="destination-button">Book Now</button>
+              <button className="destination-button" onClick={() => handleWhatsAppBooking(tour)}>Book Now</button>
             </div>
           </div>
         ))}

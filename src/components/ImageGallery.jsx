@@ -30,13 +30,24 @@ function ImageGallery() {
           <div className="gallery-item gallery-item-textbox">
             <div className="textbox-content">
               <h3>Northern<span className="text-normal"> Ghana</span></h3>
-              <p className="textbox-price">GHS 2,200</p>
               <p className="textbox-description">
                 Experience authentic cultural<br />
                 immersion with women-led tours<br />
                 across Tamale and beyond.
               </p>
-              <a href="#" className="textbox-link">learn more →</a>
+              <a 
+                href="#" 
+                className="textbox-link"
+                onClick={(e) => {
+                  e.preventDefault()
+                  const phoneNumber = '2338642845'
+                  const message = `Hello! I'm interested in learning more about Northern Ghana tours.`
+                  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
+                  window.open(whatsappUrl, '_blank')
+                }}
+              >
+                learn more →
+              </a>
             </div>
           </div>
         </div>

@@ -1,70 +1,108 @@
 import './TestimonialSection.css'
 
 function TestimonialSection() {
+  const testimonials = [
+    {
+      id: 1,
+      rating: 5,
+      date: '2024-08-15',
+      quote: 'HerGuided Tours has completely revolutionized how we approach cultural experiences. The women-led tours are incredibly authentic, and the hands-on activities ensure we truly connect with the local culture. This platform is the future of immersive travel. HerGuided Tours is more than just tours; from traditional cooking to craft workshops, it handles everything seamlessly. Highly recommended!',
+      author: 'Sarah Johnson',
+      title: 'Travel Enthusiast',
+      company: 'Cultural Explorer',
+      avatar: '/images/portrait woman.jpg',
+      gridArea: 'large'
+    },
+    {
+      id: 2,
+      rating: 5,
+      date: '2024-08-15',
+      quote: 'HerGuided Tours is more than just tours; it\'s a complete ecosystem for authentic cultural immersion.',
+      author: 'Michael Chen',
+      title: 'Director',
+      company: 'Adventure Travel Co.',
+      avatar: '/images/blacksmith main.jpg',
+      gridArea: 'card1'
+    },
+    {
+      id: 3,
+      rating: 5,
+      date: '2024-08-15',
+      quote: 'The hands-on experiences are a standout. They simplify the entire process of connecting with local communities.',
+      author: 'Amina Hassan',
+      title: 'Founder',
+      company: 'Global Experiences',
+      avatar: '/images/local cuisine.jpg',
+      gridArea: 'card2'
+    },
+    {
+      id: 4,
+      rating: 5,
+      date: '2024-08-15',
+      quote: 'The cultural immersion on HerGuided Tours is exceptional. It allows us to connect deeply with local traditions.',
+      author: 'David Thompson',
+      title: 'Managing Director',
+      company: 'Heritage Travel Ltd.',
+      avatar: '/images/festival drumming.jpg',
+      gridArea: 'card3'
+    },
+    {
+      id: 5,
+      rating: 5,
+      date: '2024-08-15',
+      quote: 'HerGuided Tours has revolutionized how we approach authentic cultural experiences.',
+      author: 'Fatima Al-Mansouri',
+      title: 'CEO',
+      company: 'Cultural Journeys',
+      avatar: '/images/smock weaving.jpg',
+      gridArea: 'card4'
+    }
+  ]
+
   return (
     <section className="testimonial-section">
-      <div className="testimonial-container">
-        <div className="testimonial-left">
-          <div className="testimonial-yellow-content">
-            <div className="testimonial-text-shadow">
-              <div className="testimonial-text-black">
-                <p>Authentic</p>
-                <p>Cultural</p>
-                <p>Experiences</p>
-              </div>
+      <div className="testimonial-stats-section">
+        <div className="testimonial-stats-container">
+          <div className="testimonial-stats-left">
+            <div className="testimonial-stat-number">550+</div>
+            <div className="testimonial-stat-label">Reviews from Industry Leaders</div>
+          </div>
+          <div className="testimonial-stats-right">
+            <div className="testimonial-avatars">
+              <div className="avatar-circle avatar-1"></div>
+              <div className="avatar-circle avatar-2"></div>
+              <div className="avatar-circle avatar-3"></div>
+              <div className="avatar-circle avatar-4"></div>
+              <div className="avatar-circle avatar-5"></div>
             </div>
+            <div className="testimonial-users-text">10,000+ users already using our services.</div>
           </div>
         </div>
-        <div className="testimonial-right">
-          <div className="testimonial-card-wrapper">
-            <div className="testimonial-decorative-number">99</div>
-            <div className="testimonial-card">
-              <div className="testimonial-stars">
-                <span className="star">★</span>
-                <span className="star">★</span>
-                <span className="star">★</span>
-                <span className="star">★</span>
-                <span className="star">★</span>
-              </div>
-              <div className="testimonial-quote">
-                <p>HerGuided Tours provided an</p>
-                <p>authentic and transformative experience.</p>
-                <p>The women-led approach made all the</p>
-              </div>
-              <div className="testimonial-divider">
-                <svg width="114" height="17" viewBox="0 0 114 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M1 16L10 10L19 16" stroke="#f5031a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  <path d="M25 16L34 10L43 16" stroke="#f5031a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  <path d="M49 16L58 10L67 16" stroke="#f5031a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  <path d="M73 16L82 10L91 16" stroke="#f5031a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  <path d="M97 16L106 10L115 16" stroke="#f5031a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </div>
-              <div className="testimonial-content-block">
-                <div className="testimonial-main-quote">
-                  <p>difference in connecting with the local</p>
-                  <p>culture. Every moment was thoughtfully</p>
-                  <p>curated, from the shea butter processing</p>
-                  <p>to the traditional drumming.</p>
+      </div>
+      <div className="testimonial-reviews-section">
+        <div className="testimonial-reviews-container">
+          <div className="testimonial-reviews-grid">
+            {testimonials.map((testimonial) => (
+              <div key={testimonial.id} className={`testimonial-review-card ${testimonial.gridArea === 'large' ? 'review-card-large' : ''}`} style={{ gridArea: testimonial.gridArea }}>
+                <div className="review-card-header">
+                  <div className="review-stars">
+                    {'★'.repeat(testimonial.rating)}
+                    <span className="review-rating">({testimonial.rating}/5)</span>
+                  </div>
+                  <div className="review-date">{testimonial.date}</div>
                 </div>
-                <div className="testimonial-author">
-                  <span>By </span>
-                  <span className="author-name">Sarah Johnson</span>
+                <div className="review-quote">{testimonial.quote}</div>
+                <div className="review-author">
+                  <div className="review-avatar">
+                    <img src={testimonial.avatar} alt={testimonial.author} />
+                  </div>
+                  <div className="review-author-info">
+                    <div className="review-author-name">{testimonial.author}</div>
+                    <div className="review-author-title">{testimonial.title}, {testimonial.company}</div>
+                  </div>
                 </div>
               </div>
-              <div className="testimonial-nav">
-                <button className="nav-arrow nav-arrow-left">
-                  <svg width="14" height="19" viewBox="0 0 14 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M13 1L1 9.5L13 18" stroke="#f5031a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </button>
-                <button className="nav-arrow nav-arrow-right">
-                  <svg width="14" height="19" viewBox="0 0 14 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1 1L13 9.5L1 18" stroke="#f5031a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </button>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
