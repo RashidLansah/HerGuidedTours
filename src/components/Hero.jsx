@@ -80,7 +80,7 @@ function Hero() {
           </div>
           <div className="hero-cta-section">
             <div className="hero-yellow-underline">
-              <img src="/images/stroke.svg" alt="Decorative stroke" />
+              <img src="/images/stroke.svg" alt="Decorative stroke" loading="eager" />
             </div>
             <button className="hero-book-button" onClick={handleBookNow}>Book now</button>
           </div>
@@ -90,6 +90,8 @@ function Hero() {
             src="/images/stunning-waterfall-landscape.jpg" 
             alt="Stunning Waterfall Landscape"
             className="hero-parallax-image"
+            loading="eager"
+            fetchPriority="high"
             style={{
               transform: `translateY(${Math.min(scrollY * 0.15, 100)}px)`
             }}

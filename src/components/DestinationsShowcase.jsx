@@ -56,7 +56,7 @@ function DestinationsShowcase() {
       <div className="showcase-grid">
         {/* Row 1 */}
         <div className="showcase-item showcase-image">
-          <img src={tours[0].image} alt={tours[0].title} />
+          <img src={tours[0].image} alt={tours[0].title} loading="lazy" decoding="async" />
         </div>
         <div className="showcase-item showcase-yellow">
           <div className="destination-text-overlay">
@@ -108,7 +108,7 @@ function DestinationsShowcase() {
           </div>
         </div>
         <div className="showcase-item showcase-image">
-          <img src="/images/Wildlife.jpg" alt="Wildlife" />
+          <img src="/images/Wildlife.jpg" alt="Wildlife" loading="lazy" decoding="async" />
         </div>
         <div className="showcase-item showcase-black">
           <div className="destination-text-overlay">
@@ -146,7 +146,7 @@ function DestinationsShowcase() {
           </div>
         </div>
         <div className="showcase-item showcase-image">
-          <img src={tours[3].image} alt={tours[3].title} />
+          <img src={tours[3].image} alt={tours[3].title} loading="lazy" decoding="async" />
         </div>
       </div>
     </section>

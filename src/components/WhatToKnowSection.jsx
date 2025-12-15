@@ -24,23 +24,23 @@ function WhatToKnowSection() {
                 <div className="info-text">A 5% cancellation fee applies to all scheduled trips due to early vendor booking and logistics coordination.</div>
               </div>
               <div className="what-to-know-stroke">
-                <img src="/images/stroke.svg" alt="Decorative stroke" />
+                <img src="/images/stroke.svg" alt="Decorative stroke" loading="lazy" />
               </div>
             </div>
           </div>
           <div className="what-to-know-images">
             <div className="image-tall image-tall-1">
-              <img src="/images/festival drumming.jpg" alt="Cultural experience" />
+              <img src="/images/festival drumming.jpg" alt="Cultural experience" loading="lazy" decoding="async" />
             </div>
             <div className="image-tall image-tall-2">
-              <img src="/images/blacksmith main.jpg" alt="Blacksmith workshop" />
+              <img src="/images/blacksmith main.jpg" alt="Blacksmith workshop" loading="lazy" decoding="async" />
             </div>
             <div className="image-column-right">
               <div className="image-square image-square-1">
-                <img src="/images/local cuisine.jpg" alt="Local cuisine" />
+                <img src="/images/local cuisine.jpg" alt="Local cuisine" loading="lazy" decoding="async" />
               </div>
               <div className="image-square image-square-2">
-                <img src="/images/local food 09.jpg" alt="Local food" />
+                <img src="/images/local food 09.jpg" alt="Local food" loading="lazy" decoding="async" />
               </div>
             </div>
           </div>

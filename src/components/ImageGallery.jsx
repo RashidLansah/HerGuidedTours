@@ -20,7 +20,12 @@ function ImageGallery() {
         <div className="gallery-grid">
           {images.map(image => (
             <div key={image.id} className={`gallery-item gallery-item-${image.position} ${image.size}`}>
-              <img src={image.src} alt={image.title} />
+              <img 
+                src={image.src} 
+                alt={image.title}
+                loading="lazy"
+                decoding="async"
+              />
               <div className="gallery-overlay">
                 <h3>{image.title}</h3>
                 <p className="gallery-price">{image.price}</p>

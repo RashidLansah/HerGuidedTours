@@ -88,7 +88,7 @@ function ToursSection() {
         {tamaleTours.map(tour => (
           <div key={tour.id} className="tour-card">
             <div className="tour-image">
-              <img src={tour.image} alt={tour.title} />
+              <img src={tour.image} alt={tour.title} loading="lazy" decoding="async" />
             </div>
             <div className="tour-content">
               <h3>{tour.title}</h3>

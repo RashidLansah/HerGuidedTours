@@ -68,7 +68,7 @@ function Footer() {
             <h3>Gallery</h3>
             <div className="instagram-grid">
               {galleryImages.slice(0, 6).map((image, index) => (
-                <img key={index} src={image} alt={`Gallery ${index + 1}`} />
+                <img key={index} src={image} alt={`Gallery ${index + 1}`} loading="lazy" decoding="async" />
               ))}
             </div>
             <div className="footer-social-icons">

@@ -173,6 +173,7 @@
 @media (max-width: 1024px) {
   .what-to-know-section {
     padding: 80px 60px;
+    height: auto;
   }
 
   .what-to-know-content {
@@ -197,11 +198,15 @@
 
 @media (max-width: 768px) {
   .what-to-know-section {
-    padding: 60px 40px;
+    padding: 40px 20px 60px;
+    height: auto;
+    min-height: auto;
+    margin-top: 0;
   }
 
   .what-to-know-title {
     font-size: 48px;
+    margin-bottom: 24px;
   }
 
   .what-to-know-info {

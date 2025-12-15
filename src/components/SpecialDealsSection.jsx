@@ -116,12 +116,12 @@ function SpecialDealsSection() {
           {tours.map(tour => (
             <div key={tour.id} className="deal-card">
               <div className="deal-image-wrapper">
-                <img src={tour.image} alt={tour.title} />
+                <img src={tour.image} alt={tour.title} loading="lazy" decoding="async" />
               </div>
               <div className="deal-content">
                 <div className="deal-header">
                   <h3>{tour.title}</h3>
-                  <div className="deal-price-top">
+                  <div className="deal-price-bottom">
                     <span className="price-current">{tour.price}</span>
                     <span className="price-note">{tour.priceNote}</span>
                   </div>

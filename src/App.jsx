@@ -1,17 +1,46 @@
 import './App.css'
 import './styles/animations.css'
+import { lazy, Suspense } from 'react'
 import Header from './components/Header'
 import Hero from './components/Hero'
-import ToursHeader from './components/ToursHeader'
-import ImageGallery from './components/ImageGallery'
-import DestinationsHeader from './components/DestinationsHeader'
-import DestinationsShowcase from './components/DestinationsShowcase'
-import SpecialDealsHeader from './components/SpecialDealsHeader'
-import SpecialDealsSection from './components/SpecialDealsSection'
-import WhatToKnowSection from './components/WhatToKnowSection'
-import TestimonialSection from './components/TestimonialSection'
-import AutoScrollGallery from './components/AutoScrollGallery'
-import Footer from './components/Footer'
+
+// Lazy load components below the fold for better initial load performance
+const ToursHeader = lazy(() => import('./components/ToursHeader'))
+const ImageGallery = lazy(() => import('./components/ImageGallery'))
+const DestinationsHeader = lazy(() => import('./components/DestinationsHeader'))
+const DestinationsShowcase = lazy(() => import('./components/DestinationsShowcase'))
+const SpecialDealsHeader = lazy(() => import('./components/SpecialDealsHeader'))
+const SpecialDealsSection = lazy(() => import('./components/SpecialDealsSection'))
+const WhatToKnowSection = lazy(() => import('./components/WhatToKnowSection'))
+const TestimonialSection = lazy(() => import('./components/TestimonialSection'))
+const AutoScrollGallery = lazy(() => import('./components/AutoScrollGallery'))
+const Footer = lazy(() => import('./components/Footer'))
+
+// Loading fallback component
+const LoadingFallback = () => (
+  <div style={{ 
+    minHeight: '200px', 
+    display: 'flex', 
+    alignItems: 'center', 
+    justifyContent: 'center',
+    background: '#f6f6f6'
+  }}>
+    <div style={{ 
+      width: '40px', 
+      height: '40px', 
+      border: '3px solid #f3f3f3',
+      borderTop: '3px solid #9D4EDD',
+      borderRadius: '50%',
+      animation: 'spin 1s linear infinite'
+    }}></div>
+    <style>{`
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+    `}</style>
+  </div>
+)
 
 function App() {
   return (
@@ -21,24 +50,34 @@ function App() {
         <Hero />
       </section>
       <section id="tours">
-        <ToursHeader />
-        <ImageGallery />
+        <Suspense fallback={<LoadingFallback />}>
+          <ToursHeader />
+          <ImageGallery />
+        </Suspense>
       </section>
       <section id="destinations">
-        <DestinationsHeader />
-        <DestinationsShowcase />
+        <Suspense fallback={<LoadingFallback />}>
+          <DestinationsHeader />
+          <DestinationsShowcase />
+        </Suspense>
       </section>
       <section id="about">
-        <SpecialDealsHeader />
-        <SpecialDealsSection />
-        <WhatToKnowSection />
+        <Suspense fallback={<LoadingFallback />}>
+          <SpecialDealsHeader />
+          <SpecialDealsSection />
+          <WhatToKnowSection />
+        </Suspense>
       </section>
       <section id="blog">
-        <TestimonialSection />
-        <AutoScrollGallery />
+        <Suspense fallback={<LoadingFallback />}>
+          <TestimonialSection />
+          <AutoScrollGallery />
+        </Suspense>
       </section>
       <section id="contact">
-        <Footer />
+        <Suspense fallback={<LoadingFallback />}>
+          <Footer />
+        </Suspense>
       </section>
     </div>
   )

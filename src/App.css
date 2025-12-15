@@ -16,3 +16,21 @@ body {
   background: white;
   color: #000;
 }
+
+/* Font optimization */
+@font-face {
+  font-family: 'Montserrat';
+  font-display: swap;
+}
+
+/* Image optimization */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Prevent layout shift */
+img[loading="lazy"] {
+  min-height: 200px;
+  background: #f6f6f6;
+}

@@ -140,9 +140,8 @@
 .deal-header {
   padding: 32px 32px 0;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  position: relative;
+  flex-direction: column;
+  gap: 12px;
   width: 100%;
 }
 
@@ -153,17 +152,14 @@
   color: #000;
   margin: 0;
   line-height: 25px;
-  max-width: calc(100% - 140px);
+  width: 100%;
   text-align: left;
 }
 
-.deal-price-top {
-  position: absolute;
-  right: 30px;
-  top: 33px;
+.deal-price-bottom {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: flex-start;
   gap: 2px;
 }
 
@@ -274,7 +270,8 @@
 
 @media (max-width: 768px) {
   .special-deals-section {
-    padding: 0 16px 48px;
+    padding: 0 16px 60px;
+    margin-bottom: 0;
   }
 
   .deal-card {
@@ -293,12 +290,11 @@
   .deal-header h3 {
     font-size: 16px;
     line-height: 22px;
-    max-width: calc(100% - 120px);
+    width: 100%;
   }
 
-  .deal-price-top {
-    right: 20px;
-    top: 25px;
+  .deal-price-bottom {
+    margin-top: 0;
   }
 
   .price-current {

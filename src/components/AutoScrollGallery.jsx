@@ -40,7 +40,7 @@ function AutoScrollGallery() {
         <div className="gallery-scroll-track">
           {duplicatedImages.map((image, index) => (
             <div key={index} className="gallery-scroll-item">
-              <img src={image} alt={`Gallery ${index + 1}`} />
+              <img src={image} alt={`Gallery ${index + 1}`} loading="lazy" decoding="async" />
             </div>
           ))}
         </div>
