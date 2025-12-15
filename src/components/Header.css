@@ -26,6 +26,18 @@
   font-weight: 700;
   color: #9D4EDD;
   letter-spacing: -0.5px;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.logo-subtitle {
+  font-size: 12px;
+  font-weight: 400;
+  color: #9D4EDD;
+  letter-spacing: 0.3px;
+  margin-top: 2px;
+  opacity: 0.85;
 }
 
 /* Desktop Navigation */
@@ -127,6 +139,14 @@
 
   .logo h2 {
     font-size: 18px;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 4px;
+  }
+
+  .logo-subtitle {
+    font-size: 10px;
+    margin-top: 0;
   }
 
   .mobile-menu-toggle {

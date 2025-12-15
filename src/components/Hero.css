@@ -33,6 +33,13 @@
   flex: 1;
 }
 
+.hero-welcome-title-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
 .hero-welcome-text {
   font-family: 'Montserrat', sans-serif;
   font-size: 24px;
@@ -40,6 +47,8 @@
   color: #000;
   line-height: 46px;
   margin: 0;
+  padding: 0;
+  padding-bottom: 4px;
 }
 
 .hero-title-row {
@@ -62,6 +71,7 @@
   color: #000;
   line-height: 46px;
   margin: 0;
+  padding: 0;
 }
 
 .hero-subtitle {
@@ -379,9 +389,16 @@
     gap: 20px;
   }
 
+  .hero-welcome-title-row {
+    align-items: flex-end;
+    gap: 8px;
+  }
+
   .hero-welcome-text {
     font-size: 18px;
-    line-height: 1.4;
+    line-height: 1.2;
+    padding: 0;
+    padding-bottom: 2px;
   }
 
   .hero-title-row {
@@ -397,8 +414,9 @@
 
   .hero-main-title,
   .hero-subtitle {
-    font-size: 32px;
+    font-size: 40px;
     line-height: 1.2;
+    padding: 0;
   }
 
   .hero-subtitle {
@@ -414,6 +432,7 @@
 
   .hero-description-section p {
     font-size: 16px;
+    font-weight: 500;
     line-height: 1.5;
   }
 
@@ -502,14 +521,23 @@
     gap: 20px;
   }
 
+  .hero-welcome-title-row {
+    align-items: flex-end;
+    gap: 6px;
+  }
+
   .hero-welcome-text {
     font-size: 16px;
+    line-height: 1.2;
+    padding: 0;
+    padding-bottom: 2px;
   }
 
   .hero-main-title,
   .hero-subtitle {
-    font-size: 24px;
+    font-size: 32px;
     line-height: 1.2;
+    padding: 0;
   }
 
   .hero-subtitle {
@@ -522,6 +550,7 @@
 
   .hero-description-section p {
     font-size: 14px;
+    font-weight: 500;
     line-height: 1.5;
   }
 

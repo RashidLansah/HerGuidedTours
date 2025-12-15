@@ -40,10 +40,12 @@ function Hero() {
         <div className="hero-top-section">
           <div className="hero-content-container">
             <div className="hero-text-section">
-              <div className="hero-welcome-text">Welcome to</div>
               <div className="hero-title-row">
                 <div className="hero-title-section">
-                  <div className="hero-main-title">HerGuided Tours</div>
+                  <div className="hero-welcome-title-row">
+                    <div className="hero-welcome-text">Welcome to</div>
+                    <div className="hero-main-title">HerGuided Tours</div>
+                  </div>
                   <div className="hero-subtitle">& Cultural <span className="hero-subtitle-violet">Experiences</span></div>
                 </div>
                 <div className="hero-description-section">

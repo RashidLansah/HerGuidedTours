@@ -88,7 +88,7 @@ function Header() {
     <header className="header">
       <div className="header-container">
         <div className="logo">
-          <h2>HerGuided Tours</h2>
+          <h2>HerGuided Tours <span className="logo-subtitle">& Cultural Experiences</span></h2>
         </div>
         <button 
           className={`mobile-menu-toggle ${isMenuOpen ? 'menu-open' : ''}`}

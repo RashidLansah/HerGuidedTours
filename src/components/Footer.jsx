@@ -19,10 +19,7 @@ function Footer() {
       <div className="footer-main">
         <div className="footer-container">
           <div className="footer-column">
-            <h3>About Us</h3>
-            <div className="footer-logo">
-              <h2>HerGuided</h2>
-            </div>
+            <h3>HerGuided Tours and Cultural Experiences</h3>
             <p>HerGuided offers immersive, women-led cultural, nature, and heritage experiences across Tamale and Northern Ghana — connecting you deeply with people, food, crafts, festivals, and wildlife.</p>
             <div className="footer-contact">
               <div className="contact-item">
