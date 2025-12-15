@@ -230,11 +230,7 @@
   }
 
   .instagram-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .instagram-grid img {
-    height: 80px;
+    display: none;
   }
 }
 
@@ -252,11 +248,6 @@
   }
 
   .instagram-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 8px;
-  }
-
-  .instagram-grid img {
-    height: 70px;
+    display: none;
   }
 }
